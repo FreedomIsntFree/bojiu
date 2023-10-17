@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_today"
+        android:icon="@drawable/selector_navi_today"
+        android:title="@string/navi_today" />
+
+    <item
+        android:id="@+id/navigation_subscription"
+        android:icon="@drawable/selector_navi_subscribe"
+        android:title="@string/navi_subscription" />
+
+    <item
+        android:id="@+id/navigation_calendar"
+        android:icon="@drawable/selector_navi_schedule"
+        android:title="@string/navi_calendar" />
+
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@drawable/selector_navi_mine"
+        android:title="@string/navi_mine" />
+
+</menu>

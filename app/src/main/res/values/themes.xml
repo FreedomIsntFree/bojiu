@@ -38,4 +38,17 @@
         <item name="android:windowIsTranslucent">false</item>
     </style>
 
+    <style name="naviButton" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/color_green</item>
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+    <style name="naviButton_title_active">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <!--没有选中的样式，导航默认的字体大小就是12sp-->
+    <style name="naviButton_title_inactive">
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>

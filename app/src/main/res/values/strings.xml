@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">啵啾一下</string>
+
+    <string name="navi_today">今天</string>
+    <string name="navi_calendar">日程</string>
+    <string name="navi_subscription">订阅</string>
+    <string name="navi_mine">我的</string>
 </resources>
