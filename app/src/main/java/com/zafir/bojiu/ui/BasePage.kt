@@ -17,11 +17,6 @@ abstract class BasePage : Fragment() {
             bundle.putInt("index", index)
             fragment.arguments = bundle
         }
-
-        @JvmStatic
-        fun getPageIndex(fragment: Fragment): Int {
-            return fragment.arguments?.getInt("index", -1) ?: -1
-        }
     }
 
     protected lateinit var mModel: HomeViewModel

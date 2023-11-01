@@ -21,5 +21,4 @@ class TodayPage : Fragment() {
         return mBinding.root
     }
 
-
 }
