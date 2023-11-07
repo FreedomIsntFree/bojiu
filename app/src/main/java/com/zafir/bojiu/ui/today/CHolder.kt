@@ -6,7 +6,7 @@ import com.zafir.bojiu.base.interfaces.BunItem
 import com.zafir.bojiu.databinding.LayoutTodayPageBinding
 import com.zafir.bojiu.model.TodayPageItem
 
-class CHolder(private val todayPage: TodayPageItem, private val binding: LayoutTodayPageBinding) : AppViewHolder(binding.root) {
+class CHolder( private val binding: LayoutTodayPageBinding) : AppViewHolder(binding.root) {
 
     override fun initView(root: View, data: BunItem) {
         if (data !is TodayPageItem) {

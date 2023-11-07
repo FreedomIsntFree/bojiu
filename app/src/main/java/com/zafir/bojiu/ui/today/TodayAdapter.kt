@@ -28,8 +28,7 @@ class TodayAdapter : AppRecyclerAdapter() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AppViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val cerHolder = if (0 <= viewType && viewType < datas.size) {
-            val hotSpotTab = datas[viewType] as TodayPageItem
-            CHolder(hotSpotTab, LayoutTodayPageBinding.inflate(inflater, parent, false))
+            CHolder(LayoutTodayPageBinding.inflate(inflater, parent, false))
         } else {
             EmptyHolder(View(parent.context).apply {
                 layoutParams = ActionBar.LayoutParams(
