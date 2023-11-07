@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="sub_header_tab_text" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/dimen_15sp</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+</resources>

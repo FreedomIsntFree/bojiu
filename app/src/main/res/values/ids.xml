@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="search_webview_id" type="id" />
+    <item name="list_item_postion" type="id" />
+    <item name="recycle_footer_loadmore" type="id" />
+    <item name="list_error_view" type="id" />
+    <item name="tag_error_code" type="id" />
+</resources>

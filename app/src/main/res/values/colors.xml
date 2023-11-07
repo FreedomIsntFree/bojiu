@@ -14,5 +14,11 @@
     <color name="color_eee">#FFEEEEEE</color>
 
     <color name="color_green">#ff3abe3f</color>
+    <color name="color_020">#E02020</color>
+
+    <color name="common_title">#FF010101</color>
+    <color name="card_title">@color/common_title</color>
+    <color name="color_bbb">#BBBBBB</color>
+
 
 </resources>
