@@ -5,4 +5,10 @@
     <string name="navi_weather">天气</string>
     <string name="navi_tool">工具</string>
     <string name="navi_mine">我的</string>
+
+    <string name="calendar">日历</string>
+    <string name="subscription">订阅</string>
+    <string name="hotspot">热点</string>
+
+
 </resources>

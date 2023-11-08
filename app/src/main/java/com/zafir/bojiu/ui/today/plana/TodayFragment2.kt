@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.zafir.bojiu.R
 import com.zafir.bojiu.databinding.FragmentToday2Binding
 
 class TodayFragment2 : Fragment() {
@@ -27,19 +28,15 @@ class TodayFragment2 : Fragment() {
 
     private fun initView() {
         titles.clear()
-        titles.add("日历")
-        titles.add("订阅")
-        titles.add("热点")
+        titles.add(getString(R.string.calendar))
+        titles.add(getString(R.string.subscription))
+        titles.add(getString(R.string.hotspot))
 
         for (title in titles) {
             mBinding.tabCard.addTab(mBinding.tabCard.newTab().setText(title))
         }
-        val fragments: MutableList<Fragment> = arrayListOf()
-        fragments.add(CalFragment())
-        fragments.add(SubFragment())
-        fragments.add(HotFragment())
 
-        mAdapter = activity?.supportFragmentManager?.let { TodayPagerAdapter(it, fragments, titles) }!!
+        mAdapter = activity?.supportFragmentManager?.let { TodayPagerAdapter(it, titles) }!!
         mBinding.pageRoot.adapter = mAdapter
         mBinding.tabCard.setupWithViewPager(mBinding.pageRoot)
     }
