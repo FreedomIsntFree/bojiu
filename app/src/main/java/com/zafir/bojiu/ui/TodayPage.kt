@@ -38,19 +38,19 @@ class TodayPage : Fragment() {
             listOf(TodayPageItem(C_PAGE, "日历"), TodayPageItem(S_PAGE, "订阅"))
         }
 
-        mBinding.pageRoot.apply {
-            adapter = mAdapter
-            isUserInputEnabled = false
-            offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-
-                }
-            })
-        }
-        TabLayoutMediator(mBinding.tabCard, mBinding.pageRoot) { tab, pos ->
-            tab.text = l[pos].name
-        }.attach()
+//        mBinding.pageRoot.apply {
+//            adapter = mAdapter
+//            isUserInputEnabled = false
+//            offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
+//            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+//                override fun onPageSelected(position: Int) {
+//
+//                }
+//            })
+//        }
+//        TabLayoutMediator(mBinding.tabCard, mBinding.pageRoot) { tab, pos ->
+//            tab.text = l[pos].name
+//        }.attach()
 
         mAdapter.updateDataList(l)
     }

@@ -43,7 +43,7 @@ class PageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
 
     override fun createFragment(position: Int): Fragment {
         val retFragment = when (position) {
-            TODAY_PAGE -> TodayPage()
+            TODAY_PAGE -> TodayPage2()
             SUBSCRIPTION_PAGE -> WeatherPage()
             CALENDAR_PAGE -> AlmanacPage()
             MINE_PAGE -> MinePage()
