@@ -1,18 +1,18 @@
-package com.zafir.bojiu.ui.today
+package com.zafir.bojiu.ui.today.plana
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.zafir.bojiu.databinding.FragmentTodayBinding
+import com.zafir.bojiu.databinding.FragmentToday2Binding
 
 class TodayFragment2 : Fragment() {
     companion object {
         val TAG: String = TodayFragment2::class.java.simpleName
     }
 
-    private lateinit var mBinding: FragmentTodayBinding
+    private lateinit var mBinding: FragmentToday2Binding
     private lateinit var mAdapter: TodayPagerAdapter
     private val titles: MutableList<String> = arrayListOf()
 
@@ -20,7 +20,7 @@ class TodayFragment2 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentTodayBinding.inflate(inflater, container, false)
+        mBinding = FragmentToday2Binding.inflate(inflater, container, false)
         initView()
         return mBinding.root
     }

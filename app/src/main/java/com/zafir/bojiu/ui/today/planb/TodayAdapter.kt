@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui.today
+package com.zafir.bojiu.ui.today.planb
 
 import android.app.ActionBar
 import android.view.LayoutInflater
@@ -10,11 +10,6 @@ import com.zafir.bojiu.base.interfaces.BunItem
 import com.zafir.bojiu.databinding.LayoutTodayPageBinding
 import com.zafir.bojiu.model.TodayPageItem
 import com.zafir.bojiu.ui.EmptyHolder
-
-const val C_PAGE = 0
-const val S_PAGE = 1
-const val H_PAGE = 2
-private const val PAGE_COUNT = 3
 
 class TodayAdapter : AppRecyclerAdapter() {
 

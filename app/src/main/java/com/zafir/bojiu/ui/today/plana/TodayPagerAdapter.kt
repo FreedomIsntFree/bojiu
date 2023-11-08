@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui.today
+package com.zafir.bojiu.ui.today.plana
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

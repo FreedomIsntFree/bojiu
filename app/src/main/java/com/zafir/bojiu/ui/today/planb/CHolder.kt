@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui.today
+package com.zafir.bojiu.ui.today.planb
 
 import android.view.View
 import com.zafir.bojiu.base.AppViewHolder

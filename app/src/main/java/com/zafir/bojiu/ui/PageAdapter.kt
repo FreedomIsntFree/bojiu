@@ -5,7 +5,8 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.zafir.bojiu.ui.tools.ToolFragment
 import com.zafir.bojiu.ui.mine.MineFragment
-import com.zafir.bojiu.ui.today.TodayFragment2
+import com.zafir.bojiu.ui.today.plana.TodayFragment2
+import com.zafir.bojiu.ui.today.planb.TodayFragment
 import com.zafir.bojiu.ui.weather.WeatherFragment
 
 class PageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
@@ -28,7 +29,7 @@ class PageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
 
     override fun createFragment(position: Int): Fragment {
         val retFragment = when (position) {
-            FRAGMENT_TODAY -> TodayFragment2()
+            FRAGMENT_TODAY -> TodayFragment()
             FRAGMENT_WEATHER -> WeatherFragment()
             FRAGMENT_ALMANAC -> ToolFragment()
             FRAGMENT_MINE -> MineFragment()
