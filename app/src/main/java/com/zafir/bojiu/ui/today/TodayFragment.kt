@@ -1,22 +1,16 @@
-package com.zafir.bojiu.ui
+package com.zafir.bojiu.ui.today
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayoutMediator
 import com.zafir.bojiu.databinding.FragmentTodayBinding
 import com.zafir.bojiu.model.TodayPageItem
-import com.zafir.bojiu.ui.today.C_PAGE
-import com.zafir.bojiu.ui.today.H_PAGE
-import com.zafir.bojiu.ui.today.S_PAGE
-import com.zafir.bojiu.ui.today.TodayAdapter
 
-class TodayPage : Fragment() {
+class TodayFragment : Fragment() {
     companion object {
-        val TAG: String = TodayPage::class.java.simpleName
+        val TAG: String = TodayFragment::class.java.simpleName
     }
 
     private lateinit var mBinding: FragmentTodayBinding

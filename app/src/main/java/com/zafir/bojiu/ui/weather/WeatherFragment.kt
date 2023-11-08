@@ -1,16 +1,15 @@
-package com.zafir.bojiu.ui
+package com.zafir.bojiu.ui.weather
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.zafir.bojiu.databinding.FragmentTodayBinding
 import com.zafir.bojiu.databinding.FragmentWeatherBinding
 
-class WeatherPage : Fragment() {
+class WeatherFragment : Fragment() {
     companion object {
-        val TAG: String = WeatherPage::class.java.simpleName
+        val TAG: String = WeatherFragment::class.java.simpleName
     }
 
     private lateinit var mBinding: FragmentWeatherBinding

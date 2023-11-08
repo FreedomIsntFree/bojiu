@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui
+package com.zafir.bojiu.ui.today
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.zafir.bojiu.databinding.FragmentTodayBinding
-import com.zafir.bojiu.ui.today.*
 
-class TodayPage2 : Fragment() {
+class TodayFragment2 : Fragment() {
     companion object {
-        val TAG: String = TodayPage2::class.java.simpleName
+        val TAG: String = TodayFragment2::class.java.simpleName
     }
 
     private lateinit var mBinding: FragmentTodayBinding
