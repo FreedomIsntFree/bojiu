@@ -7,14 +7,14 @@
         android:title="@string/navi_today" />
 
     <item
-        android:id="@+id/navigation_subscription"
+        android:id="@+id/navigation_weather"
         android:icon="@drawable/selector_navi_subscribe"
-        android:title="@string/navi_subscription" />
+        android:title="@string/navi_weather" />
 
     <item
-        android:id="@+id/navigation_calendar"
+        android:id="@+id/navigation_tool"
         android:icon="@drawable/selector_navi_schedule"
-        android:title="@string/navi_calendar" />
+        android:title="@string/navi_tool" />
 
     <item
         android:id="@+id/navigation_mine"

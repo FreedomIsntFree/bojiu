@@ -37,8 +37,8 @@ class HomeActivity : AppCompatActivity() {
         binding.navigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.navigation_today -> binding.viewPager.setCurrentItem(0, false)
-                R.id.navigation_subscription -> binding.viewPager.setCurrentItem(1, false)
-                R.id.navigation_calendar -> binding.viewPager.setCurrentItem(2, false)
+                R.id.navigation_weather -> binding.viewPager.setCurrentItem(1, false)
+                R.id.navigation_tool -> binding.viewPager.setCurrentItem(2, false)
                 R.id.navigation_mine -> binding.viewPager.setCurrentItem(3, false)
             }
             true

@@ -1,23 +1,23 @@
-package com.zafir.bojiu.ui.almanac
+package com.zafir.bojiu.ui.tools
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.zafir.bojiu.databinding.FragmentAlmanacBinding
+import com.zafir.bojiu.databinding.FragmentToolBinding
 
-class AlmanacFragment : Fragment() {
+class ToolFragment : Fragment() {
     companion object {
-        val TAG: String = AlmanacFragment::class.java.simpleName
+        val TAG: String = ToolFragment::class.java.simpleName
     }
 
-    private lateinit var mBinding: FragmentAlmanacBinding
+    private lateinit var mBinding: FragmentToolBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentAlmanacBinding.inflate(inflater, container, false)
+        mBinding = FragmentToolBinding.inflate(inflater, container, false)
         return mBinding.root
     }
 
