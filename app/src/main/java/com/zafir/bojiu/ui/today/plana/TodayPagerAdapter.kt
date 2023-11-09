@@ -3,6 +3,7 @@ package com.zafir.bojiu.ui.today.plana
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.zafir.bojiu.ui.today.plana.hotspot.HotFragment
 
 class TodayPagerAdapter(fm: FragmentManager, private var titles: List<String>) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
