@@ -38,6 +38,7 @@ class TodayFragment2 : Fragment() {
 
         mAdapter = activity?.supportFragmentManager?.let { TodayPagerAdapter(it, titles) }!!
         mBinding.pageRoot.adapter = mAdapter
+        mBinding.pageRoot.setScanScroll(false)
         mBinding.tabCard.setupWithViewPager(mBinding.pageRoot)
     }
 

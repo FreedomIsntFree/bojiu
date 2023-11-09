@@ -16,7 +16,6 @@ class CustomViewPager : ViewPager {
         this.isCanScroll = isCanScroll
     }
 
-
     override fun onTouchEvent(ev: MotionEvent): Boolean {
         return if (isCanScroll)
             super.onTouchEvent(ev)
