@@ -1,6 +1,7 @@
 package com.zafir.bojiu.ui.today.plana
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +25,11 @@ class TodayFragment2 : Fragment() {
         mBinding = FragmentToday2Binding.inflate(inflater, container, false)
         initView()
         return mBinding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("wuzhenB", TAG + "  onResume: ")
     }
 
     private fun initView() {

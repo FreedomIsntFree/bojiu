@@ -1,6 +1,7 @@
 package com.zafir.bojiu.ui.tools
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,5 +22,9 @@ class ToolFragment : Fragment() {
         return mBinding.root
     }
 
+    override fun onResume() {
+        super.onResume()
+        Log.d("wuzhenB", TAG + "  onResume: ")
+    }
 
 }

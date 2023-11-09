@@ -1,6 +1,7 @@
 package com.zafir.bojiu.ui.weather
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,11 @@ class WeatherFragment : Fragment() {
     ): View {
         mBinding = FragmentWeatherBinding.inflate(inflater, container, false)
         return mBinding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("wuzhenB", TAG + "  onResume: ")
     }
 
 

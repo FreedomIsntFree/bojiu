@@ -7,7 +7,7 @@
     tools:context=".ui.HomeActivity"
     tools:ignore="MissingDefaultResource">
 
-    <androidx.viewpager2.widget.ViewPager2
+    <com.zafir.bojiu.custom.CustomViewPager
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="0dp"
