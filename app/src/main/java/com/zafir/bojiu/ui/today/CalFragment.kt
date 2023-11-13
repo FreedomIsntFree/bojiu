@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui.today.plana
+package com.zafir.bojiu.ui.today
 
 import android.os.Bundle
 import android.view.LayoutInflater

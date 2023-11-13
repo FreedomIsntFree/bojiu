@@ -1,4 +1,4 @@
-package com.zafir.bojiu.ui.today.plana
+package com.zafir.bojiu.ui.today
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.tabs.TabLayoutMediator
 import com.zafir.bojiu.R
 import com.zafir.bojiu.databinding.FragmentToday2Binding
 
@@ -15,7 +16,6 @@ class TodayFragment2 : Fragment() {
     }
 
     private lateinit var mBinding: FragmentToday2Binding
-    private lateinit var mAdapter: TodayPagerAdapter
     private val titles: MutableList<String> = arrayListOf()
 
 
@@ -42,10 +42,17 @@ class TodayFragment2 : Fragment() {
             mBinding.tabCard.addTab(mBinding.tabCard.newTab().setText(title))
         }
 
-        mAdapter = activity?.supportFragmentManager?.let { TodayPagerAdapter(it, titles) }!!
-        mBinding.pageRoot.adapter = mAdapter
-        mBinding.pageRoot.setScanScroll(false)
-        mBinding.tabCard.setupWithViewPager(mBinding.pageRoot)
+        mBinding.pageRoot.apply {
+            adapter = TodayPagerAdapter(this@TodayFragment2)
+            isUserInputEnabled = false
+        }
+
+        TabLayoutMediator(mBinding.tabCard, mBinding.pageRoot) { tab, position ->
+            tab.text = titles[position]
+        }.attach()
+
+//        mBinding.pageRoot.setScanScroll(false)
+//        mBinding.tabCard.setupWithViewPager(mBinding.pageRoot)
     }
 
 }
