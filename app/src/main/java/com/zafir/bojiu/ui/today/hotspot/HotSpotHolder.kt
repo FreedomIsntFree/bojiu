@@ -15,9 +15,13 @@ class HotSpotHolder(private val binding: ListItemHotSpotBinding) : AppViewHolder
         if (data !is HotSpotTab) {
             return
         }
-        Log.d("wuzhenB", "nameAndCreateTime: " + data.tabName)
         nameAndCreateTime = data.tabName + "    " + TimeUtils.getDateFromTimeMillis(System.currentTimeMillis()).toString()
+        Log.d("wuzhenB", "创建时间点: " + nameAndCreateTime)
         binding.title.text = data.tabName
+        binding.refresh.setOnClickListener {
+            nameAndCreateTime = data.tabName + "    " + TimeUtils.getDateFromTimeMillis(System.currentTimeMillis()).toString()
+            Log.d("wuzhenB", "刷新时间: " + nameAndCreateTime)
+        }
     }
 
     override fun onItemClick(root: View) {
