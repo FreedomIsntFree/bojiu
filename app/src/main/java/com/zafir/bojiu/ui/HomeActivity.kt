@@ -27,8 +27,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initView() {
         binding.viewPager.apply {
-            adapter = PageAdapter(supportFragmentManager)
-            setScanScroll(false)
+            adapter = PageAdapter(supportFragmentManager, lifecycle)
+            isUserInputEnabled = false
             offscreenPageLimit = binding.navigation.menu.size() - 1
         }
 
