@@ -8,21 +8,21 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import com.zafir.bojiu.R
-import com.zafir.bojiu.databinding.FragmentToday2Binding
+import com.zafir.bojiu.databinding.FragmentTodayBinding
 
-class TodayFragment2 : Fragment() {
+class TodayFragment : Fragment() {
     companion object {
-        val TAG: String = TodayFragment2::class.java.simpleName
+        val TAG: String = TodayFragment::class.java.simpleName
     }
 
-    private lateinit var mBinding: FragmentToday2Binding
+    private lateinit var mBinding: FragmentTodayBinding
     private val titles: MutableList<String> = arrayListOf()
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentToday2Binding.inflate(inflater, container, false)
+        mBinding = FragmentTodayBinding.inflate(inflater, container, false)
         initView()
         return mBinding.root
     }
@@ -43,7 +43,7 @@ class TodayFragment2 : Fragment() {
         }
 
         mBinding.pageRoot.apply {
-            adapter = TodayPagerAdapter(this@TodayFragment2)
+            adapter = TodayPagerAdapter(this@TodayFragment)
             isUserInputEnabled = false
         }
 

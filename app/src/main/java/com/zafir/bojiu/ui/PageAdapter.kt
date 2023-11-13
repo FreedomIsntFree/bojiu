@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.zafir.bojiu.ui.mine.MineFragment
-import com.zafir.bojiu.ui.today.TodayFragment2
+import com.zafir.bojiu.ui.today.TodayFragment
 import com.zafir.bojiu.ui.tools.ToolFragment
 import com.zafir.bojiu.ui.weather.WeatherFragment
 
@@ -23,7 +23,7 @@ class PageAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            FRAGMENT_TODAY -> TodayFragment2()
+            FRAGMENT_TODAY -> TodayFragment()
             FRAGMENT_WEATHER -> WeatherFragment()
             FRAGMENT_ALMANAC -> ToolFragment()
             else -> MineFragment()
