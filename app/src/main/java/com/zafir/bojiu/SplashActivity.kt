@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
     @OptIn(DelicateCoroutinesApi::class)
     private fun jumpToHome() {
         GlobalScope.launch {
-            delay(1000)
+            delay(500)
             this@SplashActivity.apply {
                 startActivity(Intent(this, HomeActivity::class.java))
                 finish()

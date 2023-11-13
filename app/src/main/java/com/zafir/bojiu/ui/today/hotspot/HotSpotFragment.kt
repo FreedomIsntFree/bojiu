@@ -52,7 +52,10 @@ class HotSpotFragment : Fragment() {
             offscreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT
             registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
-                    Log.d("wuzhenB", "onPageSelected: "+position)
+                    val h = mAdapter.getHolderByHotSpotTab(position)
+                    if (h is HotSpotHolder) {
+                        Log.e("wuzhenB", h.nameAndCreateTime)
+                    }
                 }
             })
         }
