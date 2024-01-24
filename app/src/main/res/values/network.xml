@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="main_domain_dev">calendar.360.cn|10.198.230.254</string>
+    <string name="main_domain_online">calendar.360.cn|10.202.253.195</string>
+    <string name="h5_domain">calendar.safe.360.cn|10.202.253.195</string>
+
+    <string-array name="auto_add_query_domains">
+        <item>calendar.360.cn</item>
+    </string-array>
+
+    <string name="h5_url_base">https://calendar.safe.360.cn/agreement.html?type=</string>
+    <string-array name="h5_page">
+        <item>privacy</item>
+        <item>user</item>
+        <item>logoff</item>
+        <item>privacyhw</item>
+        <item>welfarerule</item>
+    </string-array>
+
+    <string name="official_email">360safe-ent@360.cn</string>
+
+</resources>
