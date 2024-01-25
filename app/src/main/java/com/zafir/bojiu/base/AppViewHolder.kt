@@ -6,9 +6,6 @@ import com.zafir.bojiu.R
 import com.zafir.bojiu.base.interfaces.BunItem
 import com.zafir.bojiu.base.interfaces.IAppViewHolder
 
-/**
- * Created by zheng on 2019/3/5.
- */
 abstract class AppViewHolder(root: View) : RecyclerView.ViewHolder(root), View.OnClickListener, IAppViewHolder<BunItem> {
     protected var mCoreData: BunItem? = null
     private var mLastClickTime: Long = 0
