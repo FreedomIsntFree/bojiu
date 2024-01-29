@@ -41,11 +41,11 @@ public class WrapContentActivity extends AppCompatActivity {
 
     private class RecyclerViewAdapter extends RecyclerView.Adapter {
 
-        private WebViewHolder webViewHolder;
-
-        public WebViewHolder getWebViewHolder() {
-            return webViewHolder;
-        }
+//        private WebViewHolder webViewHolder;
+//
+//        public WebViewHolder getWebViewHolder() {
+//            return webViewHolder;
+//        }
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -53,10 +53,10 @@ public class WrapContentActivity extends AppCompatActivity {
             if (viewType == ITEM_TYPE_TEXT_VIEW) {
                 return new TextViewHolder(inflater.inflate(R.layout.item_textview, parent, false));
             }
-            if (webViewHolder == null) {
-                webViewHolder = new WebViewHolder(inflater.inflate(R.layout.item_webview2, parent, false));
-            }
-            return webViewHolder;
+//            if (webViewHolder == null) {
+            return new WebViewHolder(inflater.inflate(R.layout.item_webview2, parent, false));
+//            }
+//            return webViewHolder;
         }
 
         @Override
@@ -68,7 +68,7 @@ public class WrapContentActivity extends AppCompatActivity {
 
         @Override
         public int getItemViewType(int position) {
-            if (position == 1) {
+            if (position % 2 == 0) {
                 return ITEM_TYPE_WEB_VIEW;
             }
             return ITEM_TYPE_TEXT_VIEW;
