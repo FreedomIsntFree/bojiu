@@ -74,7 +74,7 @@ public class SlideConfictActivity extends AppCompatActivity {
 
         @Override
         public int getItemViewType(int position) {
-            if (position == 1) {
+            if (position == 4) {
                 return ITEM_TYPE_WEB_VIEW;
             }
             return ITEM_TYPE_TEXT_VIEW;
