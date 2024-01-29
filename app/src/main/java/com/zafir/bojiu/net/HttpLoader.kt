@@ -43,15 +43,13 @@ object HttpLoader {
     }
 
     private fun addLogging(builder: OkHttpClient.Builder): OkHttpClient.Builder {
-        if (!mIsRunInDev) {
-            return builder
+        if (mIsRunInDev) {
+            val loggingInterceptor = HttpLoggingInterceptor { message: String ->
+                Log.d("http", message)
+            }
+            loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+            builder.addInterceptor(loggingInterceptor)
         }
-
-        val loggingInterceptor = HttpLoggingInterceptor { message: String ->
-            Log.d("http", message)
-        }
-        loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
-        builder.addInterceptor(loggingInterceptor)
         return builder
     }
 
