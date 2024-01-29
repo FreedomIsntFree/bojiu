@@ -20,6 +20,7 @@ import com.zafir.bojiu.webviewinrecyclerview.WebViewHolder;
 
 /**
  * Created by wng on 2017/7/25.
+ * 解决方案二（解决冲突）
  */
 
 public class SlideConfictActivity extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class SlideConfictActivity extends AppCompatActivity {
     private static final String TAG = "SlideConfictActivity";
     private static final int ITEM_TYPE_TEXT_VIEW = 1;
     private static final int ITEM_TYPE_WEB_VIEW = 2;
-    private static final int ITEM_VIEW_COUNT = 2;
+    private static final int ITEM_VIEW_COUNT = 5;
     private RecyclerViewAdapter mAdapter;
 
     @Override
@@ -50,13 +51,14 @@ public class SlideConfictActivity extends AppCompatActivity {
         public WebViewHolder getWebViewHolder() {
             return webViewHolder;
         }
+
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            if(viewType == ITEM_TYPE_TEXT_VIEW) {
+            if (viewType == ITEM_TYPE_TEXT_VIEW) {
                 return new TextViewHolder(inflater.inflate(R.layout.item_textview, parent, false));
             }
-            if(webViewHolder == null) {
+            if (webViewHolder == null) {
                 webViewHolder = new WebViewHolder(inflater.inflate(R.layout.item_webview, parent, false));
             }
             return webViewHolder;
@@ -64,17 +66,18 @@ public class SlideConfictActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-            if(holder instanceof TextViewHolder) {
-                ((TextViewHolder) holder).setTitle("解决方案二（解决冲突）");
+
+            if (holder instanceof TextViewHolder) {
+                ((TextViewHolder) holder).setTitle("解决方案二（解决冲突）" + position);
             }
         }
 
         @Override
         public int getItemViewType(int position) {
-            if (position == 0) {
-                return ITEM_TYPE_TEXT_VIEW;
+            if (position == 1) {
+                return ITEM_TYPE_WEB_VIEW;
             }
-            return ITEM_TYPE_WEB_VIEW;
+            return ITEM_TYPE_TEXT_VIEW;
         }
 
         @Override
@@ -87,20 +90,21 @@ public class SlideConfictActivity extends AppCompatActivity {
 
         private int mLastY;
         private int mCurrentY;
+
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             WebViewHolder webViewHolder = mAdapter.getWebViewHolder();
-            if(webViewHolder == null) {
+            if (webViewHolder == null) {
                 return false;
             }
             //获取WebView对象，以便将事件传递给他
             WebView webView = (WebView) webViewHolder.itemView.findViewById(R.id.web_view);
             //获取WebView所在item的顶部相对于其父控件（即RecyclerView的父控件）的距离
             int itemViewTop = webViewHolder.itemView.getTop();
-            if(itemViewTop > 0) {
+            if (itemViewTop > 0) {
                 return false;
             }
-            if(itemViewTop < 0) {
+            if (itemViewTop < 0) {
                 webViewHolder.itemView.scrollTo(0, 0);
                 return false;
             }
@@ -128,8 +132,8 @@ public class SlideConfictActivity extends AppCompatActivity {
 
             //如果WebView顶部距离其父控件距离未0，即WebView顶部滑动到RecyclerView父控件顶部重合时，
             // 此时需要拦截滑动事件交给WebView处理。
-            if(itemViewTop == 0) {
-                if(shouldIntercept(webView, dy)) {
+            if (itemViewTop == 0) {
+                if (shouldIntercept(webView, dy)) {
                     webView.onTouchEvent(event);
                     return true;
                 }
@@ -141,8 +145,9 @@ public class SlideConfictActivity extends AppCompatActivity {
          * 是否拦截滑动事件，判断的逻辑是：<br/>
          * 1,如果是向上滑动，并且webview能够向上滑动，则拦截事件；<br/>
          * 2,如果是向下滑动，并且webview能够向下滑动，则拦截事件。
+         *
          * @param view 判断能够滑动的view
-         * @param dy 滑动间距
+         * @param dy   滑动间距
          * @return true拦截，false不拦截。
          */
         private boolean shouldIntercept(View view, int dy) {
